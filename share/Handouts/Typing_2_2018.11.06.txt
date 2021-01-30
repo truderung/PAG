@@ -1,0 +1,38 @@
+# Typisierung Teil 2
+
+## Typen in Python
+
+Begrifflichkeiten:
+- Schlüsselwörter: and, as, assert, break, class, continue, def, del, elif, else, except, False, finally, for, from, global, if, import, in, is, lambda, None, nonlocal, not, or, pass, raise, return, True, try, while, with, yield 
+- Objekt, type()
+- Referenz, id()
+- Variable, eine Referenz auf ein Objekt. Die Daten sind im Objekt enthalten.
+- Bezeichner einer Variable: ein eindeutiger Name einer Variable, Funktion, Klasse, Modules, Objektes. Der Bezeichner kann folgende Zeichen beinhalten:
+    - Großbuchstaben A bis Z
+    - Kleinbuchstaben a bis z
+    - Unterstrich _
+    - Die Zahlen 0 bis 9 (nicht an erster Stelle) 
+    - Seit Python 3 wird Unicode unterstützt. Somit kann der Bezeichner auch Unicode-Zeichen enthalten. 
+    - Die Länge eines Bezeichners ist nicht begrenzt. Es ist aber auf Groß- und Kleinschreibung zu achten. 
+    - CamelCase und snake_case
+    - Style Guide für Python Code. https://www.python.org/dev/peps/pep-0008/
+
+### (built-in) Datentypen für Zahlen: 
+
+#### Integer (Ganzzahl)
+- können beliebig lang sein
+- ohne Präfix, Zahl zur Basis 10
+- mit 0b binär
+- mit 0o oktal
+- mit 0x hexadezimal
+
+#### Float (Fließkommazahl)
+- Zahl mit Nachkommastellen
+- Genauigkeit bis zu 15 Nachkommastellen
+- Zuweisungen mit mehr als 15 Stellen: Überstand wird abgeschnitten
+- Unterschied zum Integer ist der Dezimalpunkt und / oder e
+- Float kann mit e und einer nachstehenden Zahl erweitert werden, die als Exponent zur Basis 10 interpretiert wird
+- Zahlen < 2.2250738585072014e-308 ^= 0.0  (sys.float_info.min)
+- Zahlen > 1.7976931348623157e+308 ^= inf  (sys.float_info.max)
+- Division von Integer durch Integer ergibt einen Float-Wert (true division)
+- floor division kann mit dem Operator // erzwungen werden 

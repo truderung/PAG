@@ -1,0 +1,5 @@
+.vscode/*
+*.pyc
+math/.vscode/*
+math/Eratosthenes/.vscode/launch.json
+PGM/.vscode/*

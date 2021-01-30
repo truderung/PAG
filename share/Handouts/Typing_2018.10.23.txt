@@ -1,0 +1,54 @@
+# Typisierung
+Im Wesentlichen bedeutet Programmierung die Manipulation von Werten. Das als "Typisierung" bekannte Konzept legt die strukturelle Interpretation der zugrunde liegenden Daten fest. Das ermöglicht aus von Menschen lesbaren Symbolen einen von Maschienen ausführbaren Code (Maschinencode, Assembler-Code, Bytecode) zu erstellen.
+Die Komponente in einer Programmiersprache, die den möglichen Wertebereich einer Variable definiert, wird als Typsystem bezeichnet.
+
+Die Festlegung auf bestimmte Typen, die Wandelbarkeit der Typen und deren Grad an Initialisierungsakzeptanz unterscheidet Programmiersprachen. Solche, die ein Typsystem besitzen nennt man typisiert (in der Regel alle höheren Programmiersprachen).
+
+
+## Ziel der Typisierung
+
+- das Vermeiden von Laufzeitfehlern
+- das Sicherstellen, dass auf den Inhalten von Variablen keine Operationen ausgeführt werden, die syntaktisch oder semantisch fehlerhaft wären
+
+
+## Klassifizierung von Programmiersprachen
+
+- starke / schwache Typisierung (strong / weak typing)
+    - werden Typen unterschieden? Wie streng?
+    - Wandelbarkeit möglich? Wenn ja in welche?
+    - Implizite Typumwandlung (conversion) möglich?
+    - sind unsichere Typumwandlungen erlaubt? (bei denen z. B. Werte verloren gehen können)
+- dynamische / statische Typisierung (dynamic / static typing) 
+    - Typprüfungen zur Übersetzungszeit oder zur Laufzeit?
+    - Erkennung von Typverletzungen - vor Laufzeit oder zur Laufzeit? Nachteil der dynamischen, dass Typfehler aufkommen, wenn die Software ausgeliefert ist.
+    - Vorteil der dynamischen Typisierung: 
+        - mächtigeres Verhalten: korrekte Verarbeitung eigentlich inkompatibler Typen
+        - Erweiterungen zur Laufzeit
+- explizite / implizite Typisierung (explicit / implicit typing) 
+    - ist explizite Typangabe erforderlich / möglich?
+    - sind Typableitungen (implizit) möglich?
+- optionale Typisierung (optional typing)
+    - Typangaben, die zwar nicht erforderlich sind, aber zur besseren Lesbarkeit oder zur Fehlervermeidung eingesetzt werden können.
+
+
+## Typumwandlung
+
+- (type conversion / type casting)
+- Umwandlung eines Datentyps in einen andere
+    - explizite und implizite Typumwandlung
+        - Explizit: Typumwandlung im Programmcode ausdrücklich hingeschrieben. Das Fehlen der expliziten Angabe der Typumwandlung ist in Python zulässig
+        - Implizit: Typumwandlung nicht gesondert genannt im Quelltext. Das sind potenzielle Fehlerquellen, wenn sie unabsichtlich verwendet werden. Viele Programmiersprachen, wie z. B. Java, führen implizite Typumwandlung nur dann durch, wenn sie ohne Informationsverlust erfolgen kann, also wenn der Zieldatentyp einen gleichen oder größeren Wertebereich hat als der Ausgangsdatentyp. Implizite Konvertierung ist in Python gut möglich, weil explizite Deklaration nicht möglich ist und automatisch zum höher-wertigem Typ gewandelt werden kann.
+    - werterhaltende und verlustbehaftete Typumwandlung
+    - benutzerdefinierter und vordefinierter (“built-in”) Typumwandlung
+
+
+## Typisierung in Python
+
+- synamisch, implizit, stark: Python
+
+a = [] -> geht, dynamisch
+a = 20 -> geht, dynamisch
+a += True -> geht, implizit
+a = 20 + "20" -> geht nicht, stark -> explizite Typumwandlung nicht vorhanden
+a = 20 + int("20") -> geht, explizite Konvertierung
+a = 20 + int("quatsch") -> geht nicht, stark -> unsichere Typumwandlungen, kein eindeutiger Wert erhältlich

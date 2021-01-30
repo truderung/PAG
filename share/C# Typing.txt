@@ -1,0 +1,43 @@
+TYPEN und VARIABLEN
+
+Zwei Arten: WERTTYPEN und VERWEISTYPEN
+
+Variablen von:
+    Werttypen:
+        enthalten ihre Daten direkt
+        besitzt jede Variable eine eigene Kopie der Daten (außer im Fall von ref- und out-Parametervariablen);
+        stark (strongly-typed language)
+        implizit: "var"; Der Kompilator gibt der Variable ein Typ
+        nullable: Typ, der auch den Wert null haben kann (?); zum Beispiel: int?
+    Verweistypen:
+        speichern Verweise auf ihre Daten(Objekt)
+        können zwei Variablen auf das gleiche Objekt verweisen => die Variablen beeinflussen einander
+
+Werttypen sind unterteilt:
+    Einfache Typen: int, ulong, decimal, char, bool, usw.
+        Ganzzahltypen: 8-Bit, 16-Bit, 32-Bit, 64-Bit
+        char: UTF-16-Codeeinheit
+    Enumerationstypen:
+        Benutzerdefinierte Typen der Form enum E {...}
+    Strukturtypen:
+        Benutzerdefinierte Typen der Form struct S {...}
+    Auf NULL festlegbare Werttypen:
+        Erweiterungen aller anderen Werttypen mit einem null-Wert
+
+Verweistypen sind unterteilt:
+    Klassentypen: object, string (Unicode-Zeichenfolgen), class C {...}
+        string: Folge von UTF-16-Codeeinheiten
+    Schnittstellentypen:
+        Benutzerdefinierte Typen der Form: interface I {...}
+    Arraytypen: int[], int[,], int[,,], usw.
+    Delegattypen:
+        Benutzerdefinierte Typen der Form delegate int D(...)
+
+Typdeklarationen: Name und die Member des neuen Typs
+    object: die ultimative Basisklasse aller Typen
+
+Source:
+https://docs.microsoft.com/de-de/dotnet/csharp/tour-of-csharp/types-and-variables
+https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/
+https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/
+https://www.c-sharpcorner.com/UploadFile/ff2f08/ref-vs-out-keywords-in-C-Sharp/
