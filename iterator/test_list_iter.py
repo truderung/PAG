@@ -18,5 +18,3 @@ def test_next():
   liste = [1,2,3,4,5,6,7]
   li = ListIterator(liste)
   assert li.next() == 1
-  assert li + 1 == 1
-  
